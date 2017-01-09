@@ -11,7 +11,6 @@ import pickle
 
 
 class Cascade:
-    # INFORM_KEY = 'informed'
     NOT_INFORMED = 0
     INFORMED = 1
     ADOPTED_WEEK = "AdoptedWeek"
@@ -109,7 +108,7 @@ class Cascade:
 
     def period0(self):
         """
-            Select seed, select 50% celebrities as seed.
+            Select seed, select 10% celebrities as seed.
         """
         followers = {n: len(self.network.predecessors(n)) for n in self.network.nodes()}
         mean = float(sum(followers.values())) / len(followers)

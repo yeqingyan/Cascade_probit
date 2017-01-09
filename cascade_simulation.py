@@ -11,7 +11,6 @@ def main():
     model = Cascade(g, p)
     model.generate_cascade_result(5)
     model.save(open("dump.p", "wb"))
-
     return
 
 
